@@ -7,7 +7,7 @@ ALLOWED_HOSTS = ['*']
 
 # MIDDLEWARE
 MIDDLEWARE += [
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
 REST_FRAMEWORK = {
@@ -49,3 +49,7 @@ CACHES = {
 # Session
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
+
+# FB Settings
+## TODO FB_REDIRECT_URI
+## TODO HOME_PAGE

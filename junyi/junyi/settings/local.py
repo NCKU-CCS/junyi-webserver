@@ -17,7 +17,7 @@ class CsrfExemptSessionAuthentication(SessionAuthentication):
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',
-        'garageDC.settings.local.CsrfExemptSessionAuthentication',
+        'junyi.settings.local.CsrfExemptSessionAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_PARSER_CLASSES': (
@@ -53,3 +53,7 @@ CACHES = {
 # Session
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
+
+# FB Settings
+FB_REDIRECT_URI = 'http://localhost:8000/users/facebook/'
+HOME_PAGE = 'http://localhost:8000/'
